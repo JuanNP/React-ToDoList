@@ -1,0 +1,122 @@
+body {
+  background-image: url("assets/background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  width: 100%;
+}
+
+section {
+  width: 100%;
+  margin: 2rem 0;
+}
+
+.mainContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: center;
+
+  form {
+    max-width: 500px;
+  }
+}
+
+.form {
+  outline: none;
+  height: auto;
+  padding: 30px;
+
+  & * {
+    font-family: "Poppins", sans-serif;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+    outline: none;
+    border: none;
+  }
+
+  & .inputContainer {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+
+    & label {
+      text-align: start;
+    }
+
+    & .input {
+      background-color: rgba(255, 255, 255, 0.05);
+      border-radius: 5px;
+      padding: 10px 10px;
+      margin-top: 8px;
+      font-size: 14px;
+      font-weight: 300;
+      max-width: 90%;
+      min-width: 50%;
+      max-height: 100px;
+      height: auto;
+    }
+
+    ::placeholder {
+      color: #f1f1f1;
+    }
+
+    & .input:focus {
+      background-color: rgba(255, 255, 255, 0.176);
+    }
+  }
+
+  & h2 {
+    font-size: 24px;
+    margin: 0;
+    height: fit-content;
+  }
+
+  & .previewContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    margin: 0;
+    padding: 0;
+
+  }
+
+  button {
+    margin: auto;
+    padding: 10px 40px;
+  }
+}
+
+.listContainer {
+  overflow-y: hidden;
+}
+
+.card {
+  padding: 2em;
+  box-shadow: none !important;
+  width: auto;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+}
+
+.d-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.read-the-docs {
+  color: #888;
+}

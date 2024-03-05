@@ -37,27 +37,28 @@ function App() {
     }
 
     const newList = list.concat({ localId: id, localTitle: title, localDescription: description })
-    setList(newList)
-
     localStorage.setItem('tareas', JSON.stringify(newList))
 
     setTitle('')
     setDescription('')
-
-    console.log(list)
+    setList(newList)
   }
 
   const Delete = (e: React.MouseEvent<HTMLDivElement>): void => {
-    if (window.confirm('Are you sure you want to delete this task?')) {
-      const id = e.currentTarget.querySelector('h3')?.textContent
-      const newList = list.filter((item) => item.localTitle !== id)
-      setList(newList)
+    // if (window.confirm('Are you sure you want to delete this task?')) {
+    //   const id = e.currentTarget.querySelector('h3')?.textContent
+    //   const newList = list.filter((item) => item.localTitle !== id)
+    //   setList(newList)
 
-      localStorage.setItem('tareas', JSON.stringify(newList))
-    } else {
-      alert('Task not deleted')
-      return
-    }
+    //   localStorage.setItem('tareas', JSON.stringify(newList))
+    // } else {
+    //   alert('Task not deleted')
+    //   return
+    // }
+
+    const id = e.currentTarget.querySelector('h3')?.textContent
+    const newList = list.filter((item) => item.localTitle !== id)
+    setList(newList)
   }
 
   return (
